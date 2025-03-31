@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    height: 65px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #1d6a4f;
+    padding: 20px 25px;
+    color: white;
+}
+
+header h3 {
+    font-size: 21px;
+}
+
+header div {
+    display: flex;
+    gap: 20px;
+}
+
+header div a {
+    color: white;
+    font-size: 17px;
+    transition: color 0.7s;
+}
+
+header div a:hover {
+    color: #f1c40f;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+    }
+    header div {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+main {
+    background-color: #f8f3e6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+main>div>h1 {
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+    color: #1d6a4f;
+    font-size: 55px;
+    max-width: 80%;
+    margin: 150px auto 30px;
+}
+
+@media (max-width: 1024px) {
+    main>div>h1 {
+        font-size: 40px;
+        padding: 100px 20px 30px;
+    }
+    main>div>h2,
+    main>div>span {
+        font-size: 25px;
+        margin: 0px 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    main>div>h1 {
+        font-size: 35px;
+        padding: 80px 15px 20px;
+    }
+    main>div>h2,
+    main>div>span {
+        font-size: 22px;
+    }
+}
+
+.btn {
+    background-color: #1d6a4f;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    width: 40%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .btn {
+        width: 50%;
+    }
+    main {
+        height: 110vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        width: 70%;
+        font-size: 18px;
+    }
+    main {
+        height: 110vh;
+    }
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatText {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+main>div>h2 {
+    margin-bottom: 70px;
+}
+
+.learn>h1 {
+    text-align: center;
+    color: #1d6a4f;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+    color: #1d6a4f;
+    font-size: 45px;
+    margin: 30px auto 20px;
+}
+
+.learn {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.all-boxes>a {
+    text-decoration: none;
+    font-size: 50px;
+    position: relative;
+    top: 15px;
+    color: #1d6a4f;
+}
+
+.all-boxes {
+    font-size: 50px;
+    color: #1d6a4f;
+    display: flex;
+    justify-content: center;
+    border-bottom: #1d6a4f 2px;
+}
+
+.learn-content {
+    flex-wrap: wrap;
+    margin: 20px 30px;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: #f8f3e6;
+    overflow: none;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.box-content a {
+    color: #0d0e0d;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+}
+
+.some {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+}
+
+.some>a {
+    color: #070707;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.box1 {
+    background-color: #f8f3e6;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box2 {
+    background-color: #f8f3e6;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+.box3 {
+    background-color: #f8f3e6;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 300px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+.box1>a>h1,
+.box2>a>h1,
+.box3>a>h1 {
+    font-size: 35px;
+    color: #0d0e0e;
+    cursor: pointer;
+    border: #1d6a4f 2px solid;
+    border-radius: 10px;
+    border-top: none;
+}
+
+.box1>a,
+.box2>a,
+.box3>a {
+    color: black;
+    font-size: 20px;
+}
+
+.box3:hover,
+.box2:hover,
+.box1:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+.box1>p,
+.box2>p,
+.box3>p {
+    border-top: 5px solid #1d6a4f;
+    border-bottom: 5px solid #1d6a4f;
+    padding: 5px;
+    border-radius: 5px;
+    color: #0a0b0b;
+    font-size: 18px;
+}
+
+.madahb::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1d6a4f;
+    translate: 0.5s;
+    animation: floatTex alternate 3s;
+}
+
+@keyframes floatTex {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.madahba {
+    border-bottom: 2px solid #1d6a4f;
+    animation: floatTex 3s infinite alternate;
+}
+
+.box1>a>span,
+.box2>a>span,
+.box3>a>span {
+    font-size: 24px;
+    position: relative;
+    top: 4px;
+    color: #d4352c;
+}
+
+@media screen and (max-width: 600px) {
+    .learn-content {
+        height: 100vh;
+        margin-bottom: 990px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .learn-content {
+        height: 300vh;
+    }
+    #ousssama {
+        margin-top: 540px;
+        height: 200vh;
+    }
+    #oussama {
+        margin-top: 270px;
+    }
+    .end {
+        margin-top: 500px;
+    }
+    header {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .learn-content {
+        height: 320vh;
+    }
+    .learn>h1 {
+        font-size: 35px;
+    }
+    .all-boxes {
+        font-size: 35px;
+    }
+    .all-boxes>a {
+        font-size: 35px;
+    }
+    #oussama {
+        margin-top: 703px;
+    }
+}
+
+.learn-content {
+    height: 300vh;
+}
+
+@media screen and (max-width: 788px) {
+    .learn-content {
+        height: 320vh;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin: 10px;
+        width: 90%;
+    }
+    #ousssama {
+        margin-top: 1000px;
+        height: 200vh;
+    }
+    #oussama {
+        margin-top: 742px;
+    }
+    .end {
+        margin-top: 1050px;
+    }
+    header {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #ousssama {
+        margin-top: 1000px;
+    }
+    #oussama {
+        margin-top: 743px;
+    }
+    .end {
+        margin-top: 900px;
+    }
+    header {
+        position: relative;
+    }
+    main {
+        position: relative;
+        top: -150px;
+    }
+    section {
+        position: relative;
+        top: -150px;
+    }
+}
+
+@media screen and ( max-width:1200px) {
+    .Islamic-Knowledge-Hub {
+        font-size: 14px;
+    }
+    .Contact-Us {
+        font-size: 14px;
+    }
+    .Quick-Links {
+        font-size: 14px;
+    }
+}
+
+#oussama {
+    position: relative;
+    top: -100px;
+}
+
+#box1,
+#box2,
+#box3 {
+    height: 530px;
+}
+
+.Quick-Links {
+    display: flex;
+    flex-direction: column;
+}
+
+.space:hover {
+    color: #f1c40f;
+    transition: 1s;
+}
+
+.end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #1d6a4f;
+    padding: 30px 20px;
+    height: 300px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.Contact-Us,
+.Islamic-Knowledge-Hub {
+    color: whitesmoke;
+    font-weight: 100;
+}
+
+.color {
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.icon {
+    color: whitesmoke;
+    font-weight: 100;
+}
+
+.space {
+    margin-bottom: 10px;
+    color: whitesmoke;
+    font-weight: 100;
+}
+
+.copyright {
+    background-color: #1d6a4f;
+    text-align: center;
+    border-top: 1px solid whitesmoke;
+    margin-top: 110px;
+    padding: 10px;
+}
+
+.Contact-Us h4,
+.Islamic-Knowledge-Hub h4 {
+    font-weight: 100;
+}
+
+.Islamic-Knowledge-Hub h4 {
+    margin-top: 30px;
+}
+
+.Contact-Us .icons .icon {
+    font-size: 25px;
+    color: #f8f3e6;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1024px) {
+    .end {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding-top: 20px;
+    }
+    .Contact-Us,
+    .Islamic-Knowledge-Hub {
+        margin: 0;
+        width: 80%;
+    }
+    .icons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .end {
+        padding: 20px;
+    }
+    .Contact-Us,
+    .Islamic-Knowledge-Hub {
+        width: 100%;
+    }
+    .copyright {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .end {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
