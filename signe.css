@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("file-Rstku6KvUNWgDnt6ZXGR9X (1).webp");
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    height: clamp(100vh, 100vh, 100vh);
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #f8f3e6;
+    height: 420px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+}
+
+.input {
+    display: block;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+    color: #1d6a4f;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatText {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+input {
+    color: rgb(10, 9, 9);
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 2px solid #1d6a4f;
+    backdrop-filter: blur(2px);
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.3s
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    margin: 0px;
+    color: #1d6a4f;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+}
+
+.btn {
+    display: block;
+    margin: 10px;
+}
+
+.btn button {
+    background-color: #1d6a4f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.3s
+}
+
+.btn button>a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn button:hover {
+    opacity: 0.9;
+}
+
+.create-account {
+    text-align: start;
+    color: #1d6a4f;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out, floatText 1s infinite alternate ease-in-out;
+}
+
+.btn-creatw {
+    color: #1d6a4f;
+    font-size: 23px;
+}
+
+.forgot-password>a {
+    color: #1d6a4f;
+}
+
+.forgot-password {
+    margin-top: 20px;
+}
+
+.btn-create {
+    color: #1d6a4f;
+}
